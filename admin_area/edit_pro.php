@@ -60,7 +60,7 @@ if(isset($_GET['edit_pro'])){
 		<table align="center" width="795" border="2" bgcolor="#187eae">
 			
 			<tr align="center">
-				<td colspan="7"><h2>Edit & Update Product</h2></td>
+				<td colspan="7"><h2>Edit and Update Product</h2></td>
 			</tr>
 			
 			<tr>

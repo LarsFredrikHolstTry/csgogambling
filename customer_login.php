@@ -71,15 +71,23 @@ include("functions/functions.php");
                         <tr>
                         <td align="left"><b>Brukernavn (epost):</b></td>
                         </tr>
+                        
                         <tr>
-                            <td><input type="text" name="email" placeholder="eksempel@epost.no" required/></td>
+                            <td><input type="text" 
+                            name="email" 
+                            oninvalid="this.setCustomValidity('Vennligst fyll inn')" oninput="setCustomValidity('')" 
+                            placeholder="eksempel@epost.no" required/></td>
                         </tr>
 
                         <tr>
                             <td align="left"><b>Passord: </b><a style="float:right;" href="checkout.php?forgot_pass" class="glemtpassord">Glemt passord?</a></td>
                         </tr>
                         <tr>
-                            <td><input type="password" name="pass" placeholder="Passord" required/></td>
+                            <td><input type="password" 
+                            name="pass" 
+                            oninvalid="this.setCustomValidity('Vennligst fyll inn')" 
+                            oninput="setCustomValidity('')"
+                            placeholder="Passord" required/></td>
                         </tr>
                     </table> 
                     
@@ -104,7 +112,7 @@ include("functions/functions.php");
 
                     if($check_customer==0){
 
-                        echo "<script>alert('Passord eller Email er feil, prøv igjen.')</script>";
+                        echo "<h5>Passord eller Email er feil, prøv igjen.</h5>";
                         exit();
 
                     }
@@ -120,13 +128,11 @@ include("functions/functions.php");
 
                         $_SESSION['customer_email']=$c_email; 
 
-                        echo "<script>alert('You logged in successfully, Thanks!')</script>";
                         echo "<script>window.open('customer/my_account.php','_self')</script>";
 
                     } else {
                         $_SESSION['customer_email']=$c_email; 
 
-                        echo "<script>alert('You logged in successfully, Thanks!')</script>";
                         echo "<script>window.open('customer/my_account.php','_self')</script>";
 
                     }

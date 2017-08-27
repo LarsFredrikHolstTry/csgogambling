@@ -29,15 +29,27 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
+html {
+  position:relative; 
+  min-height: 100%;
+}
+
 .main_wrapper{
     width: 100%;
     height: auto;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 .content_wrapper {
     width: 1200px;
     margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#sidebar {
+    width: 200px;
+    float: left;
 }
 
 #form {
@@ -51,7 +63,7 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+        font-family: 'Raleway', sans-serif;
 
 }
 
@@ -114,6 +126,10 @@ input[type=text], select {
     background-color: #e3e3e3;
 }
 
+.banner a img {
+    margin: 10px;
+}
+
 hr {
     margin: 10px;
     border: none;
@@ -160,94 +176,56 @@ hr {
     }
 }
 
-#sidebar {
-    width: 200px;
-    height: 250px;
-    float: right;
-    padding: 10px;
-    background-color: #e3e3e3;
-    border-radius: 5px;
+#content_area {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 
-#cats li a {
+#products_box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#single_product { 
+    width: 220px;
     float: left;
-    padding: 15px;
-    text-decoration: none;
-    color: gray;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px #bababa;
+    border-radius: 4.5px;
 }
 
-#cats li a:hover {
-    color: #222222;
+#single_product:hover { 
+    box-shadow: 0px 0px 8px #797979;
 }
 
-#cats {
-    display: inline;
+#titleogpris {
     text-decoration: none;
     color: #586e72;
-    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 25px;
+}
+
+
+h2 {
+    text-decoration: none;
+    color: #586e72;
     font-size: 14px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
-    list-style: none;
+    margin-top: 25px;
 }
 
-#sidebar_title {
-    display: inline;
+h1 {
     text-decoration: none;
-    color: #586e72;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
-}
-
-#endrebruker {
-    width: 500px;
-    margin: 0 auto;
-    margin-top: 50px;
-}
-
-#endrebruker_form {
-    width: 900px;
-    font-family: 'Raleway', sans-serif;
-    margin: 0 auto;
-}
-
-h2 {
-    display: inline;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-}
-
-.endrebrukerknapp {
-    margin-top: 20px;
-    background-color: #f5ab00;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4.5px;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-}
-
-.endrebrukerknapp:hover {
-        background-color: #fcbd2a;
-}
-
-#velkommennavn {
-    text-align: left;
-    padding-top: 70px;
-    padding-left: 470px;
-    font-size: 16px;
+    margin-top: 25px;
 }

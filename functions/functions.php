@@ -197,15 +197,14 @@ function getPro(){
 		echo "
             <a href='details.php?pro_id=$pro_id'>
 				<div id='single_product'>
-
+                
 					<img src='admin_area/product_images/$pro_image' width='200' height='200' />
                     
 					<div id='titleogpris'>        
                         <h3 style='float:left;'>$pro_title</h3>
-                        <h3 style='float:right;'>$pro_price ,-</h3>
+                        <h3 style='float:right; color: #f5ab00;'>$pro_price,-</h3>
 					</div>
                     
-                        
 				</div>
             </a>
             
@@ -246,10 +245,8 @@ function getProSmall(){
                     
 					<div id='titleogpris'>        
                         <h4 style='float:left;'>$pro_title</h4>
-                        <h4 style='float:right;'>$pro_price ,-</h4>
-					</div>
-                    
-                        
+                        <h4 style='float:right; color: #f5ab00;'>$pro_price,-</h4>
+					</div>  
 				</div>
             </a>
             
@@ -260,18 +257,6 @@ function getProSmall(){
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

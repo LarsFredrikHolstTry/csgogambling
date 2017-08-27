@@ -15,9 +15,7 @@ include("functions/functions.php");
 	</head>
 	
 <body>
-    
 
-	
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
         
@@ -71,50 +69,10 @@ include("functions/functions.php");
         
         <!-- bannerbilde -->
         <div class="banner" style="text-align: center;">
-            <a href="#"><img src="images/banner.jpg"></a>
+            <a href="#"><img src="images/banner.png"></a>
+            <a href="#"><img src="images/face.png"></a>
         </div>
         
-        
-
-        <!--
-		<div class="menubar">
-			
-			<ul id="menu">
-				<li><a href="index.php">LOGO</a></li>
-				<li><a href="#">produkter</a></li>
-                <li><img class="img" src="images/logo.png"></li>
-
-				<li>
-                    <a href="customer/my_account.php">Hei, 
-                    <?php 
-/*
-                $user = $_SESSION['customer_email'];
-				
-				$get_img = "select * from customers where customer_email='$user'";
-				
-				$run_img = mysqli_query($con, $get_img); 
-				
-				$row_img = mysqli_fetch_array($run_img); 
-				
-				$c_image = $row_img['customer_image'];
-				
-				$c_name = $row_img['customer_name'];
-*/
-				    if(isset($_SESSION['customer_email'])){
-					   echo "$c_name";
-                    } else {
-					   echo "<b>Gjest</b>";
-					}
-					?>
-                    </a>
-                </li>
-                
-				<li><a href="checkout.php">handlekurv: <?php total_price(); ?>
-                    </a>
-                </li>
-			
-			</ul>
-
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
 
@@ -131,13 +89,7 @@ include("functions/functions.php");
 				</div>
 			</div>
 		</div>
-		<!--Content wrapper ends-->
-		
-
-	
 	</div> 
-    <!--Main wrapper ends here-->
-
 
 </body>
 </html>

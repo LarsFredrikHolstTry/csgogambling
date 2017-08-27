@@ -45,7 +45,7 @@ include("includes/db.php");
 	
 	$_SESSION['user_email']=$email;
 	
-	echo "<script>window.open('index.php?logged_in=You have successfully Logged in!','_self')</script>";
+	echo "<script>window.open('index.php?','_self')</script>";
 	
 	}
 	else {

@@ -1,4 +1,5 @@
 <!DOCTYPE>
+
 <?php 
 
 session_start(); 
@@ -6,12 +7,19 @@ include("functions/functions.php");
 include("includes/db.php");
 
 ?>
+
 <html>
 	<head>
-		<title>My Online Shop</title>
-		
-		
-	<link rel="stylesheet" href="styles/style.css" media="all" /> 
+		<title>Handlevogn - Dingser.no</title>
+        
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+        </script>
+        <script src="js/functions.js"></script>
+        
+	<link rel="stylesheet" href="styles/cart.css" media="all" /> 
 	</head>
 	
 <body>
@@ -19,110 +27,73 @@ include("includes/db.php");
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
 	
-		<!--Header starts here-->
-		<div class="header_wrapper">
-		
-			<a href="index.php"><img id="logo" src="images/logo.gif" /> </a>
-			<img id="banner" src="images/ad_banner.gif" />
-		</div>
-		<!--Header ends here-->
-		
-		<!--Navigation Bar starts-->
-		<div class="menubar">
-			
-			<ul id="menu">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="all_products.php">All Products</a></li>
-				<li><a href="customer/my_account.php">My Account</a></li>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="cart.php">Shopping Cart</a></li>
-				<li><a href="#">Contact Us</a></li>
-			
-			</ul>
-			
-			<div id="form">
-				<form method="get" action="results.php" enctype="multipart/form-data">
-					<input type="text" name="user_query" placeholder="Search a Product"/ > 
-					<input type="submit" name="search" value="Search" />
-				</form>
-			
-			</div>
-			
-		</div>
-		<!--Navigation Bar ends-->
-	
+                    <!-- support - logg inn -->
+        <div class="loginreg" style="text-align: center;">
+            <ul>
+                <li>
+                
+                <?php
+					if(isset($_SESSION['customer_email'])){
+                        echo '<p><a href="customer/my_account.php">'. $_SESSION['customer_email']. '</a></p> ';
+
+					} else {
+                        echo '<li><a href="customer_login.php">Logg inn / registrer</a></li>';
+					}
+				?>
+
+                </li>
+                
+            </ul>
+        </div>
+        
+                <!-- header med søkebar -->
+        <header>
+            <ul class="nav">
+                <li><a id="dingser" href="index.php">dingser.no</a></li>
+
+                <li><a href="cart.php">Handlevogn <a style="color: black;"><?php total_price(); ?></a></a></li>
+                
+                <!-- søkebar -->
+                <div id="form">
+                    <form method="get" action="results.php" enctype="multipart/form-data">
+                    <input type="text" name="user_query" placeholder="Søk her..."/ > 
+                    <input type="submit" id="searchsubmit" name="search" value="." />
+                    </form>
+                </div>
+            </ul>
+        </header>
+        
+        <!-- strek -->
+        <hr>
+        
+        <!-- produkt - salg - nye produkter -->
+        <div class="alt" style="text-align: center;">
+            <ul>
+                <li><a href="#">produkter</a></li>
+                <li><a href="#">salg</a></li>
+                <li><a href="#">nye produkter</a></li>
+            </ul>
+        </div>
+        
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
-		
-			<div id="sidebar">
-			
-				<div id="sidebar_title">Categories</div>
-				
-				<ul id="cats">
-				
-				<?php getCats(); ?>
-				
-				<ul>
-					
-				<div id="sidebar_title">Brands</div>
-				
-				<ul id="cats">
-					
-					<?php getBrands(); ?>
-				
-				<ul>
-			
-			
-			</div>
 		
 			<div id="content_area">
 			
 			<?php cart(); ?>
-			
-			<div id="shopping_cart"> 
-					
-					<span style="float:right; font-size:17px; padding:5px; line-height:40px;">
-					
-					<?php 
-					if(isset($_SESSION['customer_email'])){
-					echo "<b>Welcome:</b>" . $_SESSION['customer_email'] . "<b style='color:yellow;'>Your</b>" ;
-					}
-					else {
-					echo "<b>Welcome Guest:</b>";
-					}
-					?>
-					
-					<b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="index.php" style="color:yellow">Back to Shop</a>
-					
-					<?php 
-					if(!isset($_SESSION['customer_email'])){
-					
-					echo "<a href='checkout.php' style='color:orange;'>Login</a>";
-					
-					}
-					else {
-					echo "<a href='logout.php' style='color:orange;'>Logout</a>";
-					}
-					
-					
-					
-					?>
-					
-					</span>
-			</div>
-			
+
 				<div id="products_box">
 				
 			<form action="" method="post" enctype="multipart/form-data">
 			
-				<table align="center" width="700" bgcolor="skyblue">
-					
-					<tr align="center">
-						<th>Remove</th>
-						<th>Product(S)</th>
-						<th>Quantity</th>
-						<th>Total Price</th>
-					</tr>
+				<table align="center" width="1200">
+					<div class="produktogpris">
+                        <tr align="center">
+                            <th><h2>Fjern</h2></th>
+                            <th><h2>Produkt(er)</h2></th>
+                            <th><h2>Pris</h2></th>
+                        </tr>
+                    </div>
 					
 		<?php 
 		$total = 0;
@@ -156,46 +127,29 @@ include("includes/db.php");
 			$values = array_sum($product_price); 
 			
 			$total += $values; 
+                
 					
 					?>
-					
-					<tr align="center">
-						<td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>"/></td>
-						<td><?php echo $product_title; ?><br>
-						<img src="admin_area/product_images/<?php echo $product_image;?>" width="60" height="60"/>
-						</td>
-						<td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty'];?>"/></td>
-						<?php 
-						if(isset($_POST['update_cart'])){
-						
-							$qty = $_POST['qty'];
-							
-							$update_qty = "update cart set qty='$qty'";
-							
-							$run_qty = mysqli_query($con, $update_qty); 
-							
-							$_SESSION['qty']=$qty;
-							
-							$total = $total*$qty;
-						}
-						
-						
-						?>
-						
-						
-						<td><?php echo "$" . $single_price; ?></td>
-					</tr>
+                    
+            <tr align="center">
+                <div class="product">
+                    <td><p class="remove">X</p></td>
+                    <td><h1><?php echo $product_title; ?></h1><br>
+                    <img src="admin_area/product_images/<?php echo $product_image;?>" width="80" height="80"/></td>
+                    <td><h1><?php echo $single_price; ?>,-</h1></td>
+                </div>
+            </tr>
 					
 					
 				<?php } } ?>
-				
-				<tr>
-						<td colspan="4" align="right"><b>Sub Total:</b></td>
-						<td><?php echo "$" . $total;?></td>
+
+                    <tr>
+						<td colspan="3" align="right"><b><h1>Total pris:</h1></b></td>
+						<td><h1><?php echo $total;?>,-</h1></td>
 					</tr>
 					
 					<tr align="center">
-						<td colspan="2"><input type="submit" name="update_cart" value="Update Cart"/></td>
+						<td><input type="submit" name="update_cart" value="Update Cart"/></td>
 						<td><input type="submit" name="continue" value="Continue Shopping" /></td>
 						<td><button><a href="checkout.php" style="text-decoration:none; color:black;">Checkout</a></button></td>
 					</tr>
@@ -244,23 +198,13 @@ include("includes/db.php");
 				</div>
 			
 			</div>
+                    
 		</div>
 		<!--Content wrapper ends-->
 		
-		
-		
-		<div id="footer">
-		
-		<h2 style="text-align:center; padding-top:30px;">&copy; 2014 by www.OnlineTuting.com</h2>
-		
+
+	
 		</div>
-	
-	
-	
-	
-	
-	
-	</div> 
 <!--Main Container ends here-->
 
 

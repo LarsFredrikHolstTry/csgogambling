@@ -17,7 +17,7 @@ include("includes/db.php");
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
 	
-       <!-- support - logg inn -->
+        <!-- support - logg inn -->
         <div class="loginreg" style="text-align: center;">
             <ul>
                 <li><a href="customer_login.php">Logg inn / registrer</a></li>
@@ -65,7 +65,7 @@ include("includes/db.php");
 						
                         <!-- NAVN -->
 						<tr>
-							<td align="left">Navn:</td>
+                            <td align="left"><b>Navn:</b></td>
                         </tr>
                         <tr>
 							<td><input type="text" name="c_name" placeholder="Ola Nordmann" required/></td>
@@ -73,67 +73,43 @@ include("includes/db.php");
 						
                         <!-- EMAIL -->
 						<tr>
-                            <td align="left">Email:</td>
+                            <td align="left"><b>Email:</b></td>
 						</tr>
                         <tr>
-                            <td><input type="text" name="c_email" required/></td>
+                            <td><input type="text" name="c_email"  placeholder="email@eksempel.no" required/></td>
                         </tr>
                         
                         <!-- PASSORD -->
 						<tr>
-							<td align="left">Passord:</td>
+                            <td align="left"><b>Passord:</b></td>
                         </tr>
                         <tr>
-							<td><input type="password" name="c_pass" required/></td>
+							<td><input type="password" name="c_pass"  placeholder="••••••••••••••" required/></td>
 						</tr>
-						
-                        <!-- BILDE -->
+                        
+                        <!-- ADDRESSE -->
 						<tr>
-							<td align="left">Bilde:</td>
+                            <td align="left"><b>Adresse:</b></td>
                         </tr>
                         <tr>
-							<td><input type="file" name="c_image" required/></td>
-						</tr>
-
-                        <!-- LAND -->
+							<td><input type="text" name="c_address" placeholder="Norgesgate 2" required/></td>
+                        </tr>
+                        
+                        <!-- Post Nummer -->
 						<tr>
-							<td align="left">Land:</td>
+                            <td align="left"><b>Post Nummer:</b></td>
                         </tr>
                         <tr>
-							<td>
-							<select name="c_country">
-								<option>Velg et land</option>
-								<option>Norge</option>
-								<option>Sverige</option>
-								<option>Danmark</option>
-							</select>
-							
-							</td>
-						</tr>
-						
-                        <!-- BY -->
-						<tr>
-							<td align="left">By:</td>
-                        </tr>
-                        <tr>
-							<td><input type="text" name="c_city" required/></td>
+							<td><input type="text" name="c_city" placeholder="0123 Oslo" required/></td>
 						</tr>
 						
                         <!-- TLF -->
 						<tr>
-							<td align="left">Tlf nummer:</td>
+                            <td align="left"><b>Tlf nummer:</b></td>
                         </tr>
                         <tr>
-							<td><input type="text" name="c_contact" required/></td>
+							<td><input type="text" name="c_contact" placeholder="+47 12 34 56 78" required/></td>
 						</tr>
-						
-                        <!-- ADDRESSE -->
-						<tr>
-							<td align="left">Adresse:</td>
-                        </tr>
-                        <tr>
-							<td><input type="text" name="c_address" required/></td>
-                        </tr>
 					
 					</table>
                     

@@ -2,9 +2,7 @@
 session_start(); 
 
 if(!isset($_SESSION['user_email'])){
-	
-	echo "<script>window.open('login.php?not_admin=You are not an Admin!','_self')</script>";
-}
+	}
 else {
 
 ?>
@@ -13,33 +11,31 @@ else {
 
 <html>
 	<head>
-		<title>This is Admin Panel</title> 
-		
-	<link rel="stylesheet" href="styles/style.css" media="all" /> 
+        <title>Admin Panel</title> 
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="styles/style.css" media="all" /> 
 	</head>
 
 
 <body> 
 
 	<div class="main_wrapper">
-	
-	
-		<div id="header"></div>
-		
+
 		<div id="right">
-		<h2 style="color: white; text-align:center; font-family: 'Raleway', sans-serif;
-">Manage Content</h2>
+		<h3 style="color: white;font-family: 'Raleway', sans-serif;"><i class="fa fa-list"></i> Meny</h3>
 			
-			<a href="index.php?insert_product">Insert New Product</a>
-			<a href="index.php?view_products">View All Products</a>
-			<a href="index.php?insert_cat">Insert New Category</a>
-			<a href="index.php?view_cats">View All Categories</a>
-			<a href="index.php?insert_brand">Insert New Brand</a>
-			<a href="index.php?view_brands">View All Brands</a>
-			<a href="index.php?view_customers">View Customers</a>
-			<a href="index.php?view_orders">View Orders</a>
-			<a href="index.php?view_payments">View Payments</a>
-			<a href="logout.php">Admin Logout</a>
+			<a href="index.php?insert_product"><i class="fa fa-plus"></i> Nytt produkt</a>
+			<a href="index.php?view_products"><i class="fa fa-list-ul"></i> Alle produkter</a>
+			<a href="index.php?insert_cat"><i class="fa fa-plus"></i> Ny kategori</a>
+			<a href="index.php?view_cats"><i class="fa fa-list-ul"></i> Alle kategorier</a>
+			<a href="index.php?insert_brand"><i class="fa fa-plus"></i> Nytt merke</a>
+			<a href="index.php?view_brands"><i class="fa fa-list-ul"></i> Alle merker</a>
+			<a href="index.php?view_customers"><i class="fa fa-users"></i> Brukere</a>
+			<a href="index.php?view_orders"><i class="fa fa-shopping-cart"></i> Bestillinger</a>
+			<a href="index.php?view_payments"><i class="fa fa-paypal"></i> Betalinger</a>
+			<a href="logout.php"><i class="fa fa-power-off"></i> Logg ut</a>
 		
 		</div>
 		
@@ -103,11 +99,6 @@ else {
 		
 		?>
 		</div>
-
-
-
-
-
 
 	</div>
 

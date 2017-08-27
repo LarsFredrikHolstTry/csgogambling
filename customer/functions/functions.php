@@ -123,7 +123,7 @@ if(isset($_GET['add_cart'])){
 		
 		}
 		
-		echo "$" . $total;
+		echo $total . ",-" ;
 		
 	
 	}
