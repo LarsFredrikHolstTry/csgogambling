@@ -1,0 +1,253 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+.main_wrapper{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.content_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#form {
+    margin: auto;
+}
+
+input[type=text], select {
+    width: 30%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav li {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.nav li a {
+    display: inline;
+    text-decoration: none;
+    color: #586e72;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.loginreg {
+    width: auto;
+    margin: 10px;
+}
+
+.loginreg ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+#dingser {
+    color: #f5ab00;
+    padding: 10px;
+}
+
+#dingser:hover {
+    color: #525252;
+}
+
+#searchsubmit
+{    
+    visibility: hidden;
+}
+
+.loginreg ul li a {
+    padding: 10px;
+    color: #586e72;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+.loginreg ul li a:hover {
+    background-color: #e3e3e3;
+}
+
+hr {
+    margin: 10px;
+    border: none;
+    height: 1px;
+    color: #333;
+    background-color: #333;
+}
+
+.alt ul li {
+    width: 100%;
+    margin: 10px;
+    list-style-type: none;
+    display: inline;
+}
+
+.alt ul li a {
+    padding: 11px;
+    width: 100%;
+    margin-top: 36px;
+    color: #586e72;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.alt ul li a:hover {
+    background-color: #e3e3e3;
+}
+
+@media {
+    .nav li:nth-child(1) {
+        margin-left: 15%;
+        float: left;
+        text-align: left;
+    }
+
+    .nav li:nth-child(2) {
+        margin-right: 15%;
+        float: right;
+        text-align: right;
+    }
+}
+
+#sidebar {
+    width: 200px;
+    height: 250px;
+    float: right;
+    padding: 10px;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+}
+
+#cats li a {
+    float: left;
+    padding: 15px;
+    text-decoration: none;
+    color: gray;
+}
+
+#cats li a:hover {
+    color: #222222;
+}
+
+#cats {
+    display: inline;
+    text-decoration: none;
+    color: #586e72;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+}
+
+#sidebar_title {
+    display: inline;
+    text-decoration: none;
+    color: #586e72;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+#endrebruker {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#endrebruker_form {
+    width: 900px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+}
+
+h2 {
+    display: inline;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.endrebrukerknapp {
+    margin-top: 20px;
+    background-color: #f5ab00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4.5px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.endrebrukerknapp:hover {
+        background-color: #fcbd2a;
+}
+
+#velkommennavn {
+    text-align: left;
+    padding-top: 70px;
+    padding-left: 470px;
+    font-size: 16px;
+}
