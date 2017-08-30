@@ -89,7 +89,17 @@ include("functions/functions.php");
 				</div>
 			</div>
 		</div>
-	</div> 
+        
+    <div class="footer">
+        <h1 align="center">FOOOOOOOTER</h1>
+            <li><a href="admin_area/login.php">Admin login</a></li>
+            <li><a href="#">Kundeservice</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Noe annet</a></li>
+        <h1 align="center">kopyright 2018</h1>
+    </div>
+        
+	</div>
 
 </body>
 </html>

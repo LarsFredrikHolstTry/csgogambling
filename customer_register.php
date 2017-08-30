@@ -133,10 +133,10 @@ include("includes/db.php");
 		$c_city = $_POST['c_city'];
 		$c_contact = $_POST['c_contact'];
 		$c_address = $_POST['c_address'];
-	
+    
 		
 		move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
-		
+
 		 $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image) values ('$ip','$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image')";
 	
 		$run_c = mysqli_query($con, $insert_c); 

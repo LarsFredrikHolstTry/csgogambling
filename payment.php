@@ -54,7 +54,7 @@
 
 
 ?>
-<h2 align="center" style="padding:2px;">Pay now with Paypal:</h2>
+<h2 align="center" style="padding:2px;">Betal nå med paypal:</h2>
 
     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
 
@@ -75,12 +75,13 @@
     <input type="hidden" name="cancel_return" value="http://www.onlinetuting.com/myshop/paypal_cancel.php"/>
 
     <!-- Display the payment button. -->
-    <input type="image" name="submit" border="0"
-    src="paypal_button.png"
-    alt="PayPal - The safer, easier way to pay online">
-    <img alt="" border="0" width="1" height="1"
-    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
-
+    <div class="paypalknapp">
+        <input type="image" name="submit" border="0"
+        src="paypal_button.png"
+        alt="PayPal - The safer, easier way to pay online">
+        <img align="center" alt="" border="0" width="0.1" height="0.1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+    </div>
     </form>
 
 </div>

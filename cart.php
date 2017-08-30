@@ -86,7 +86,7 @@ include("includes/db.php");
 				
 			<form action="" method="post" enctype="multipart/form-data">
 			
-				<table align="center" width="1200">
+				<table align="center" width="1200px">
 					<div class="produktogpris">
                         <tr align="center">
                             <th><h2>Fjern</h2></th>
@@ -128,36 +128,43 @@ include("includes/db.php");
 			
 			$total += $values; 
                 
-					
 					?>
                     
             <tr align="center">
                 <div class="product">
-                    <td><p class="remove">X</p></td>
+                    <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>"/></td>
                     <td><h1><?php echo $product_title; ?></h1><br>
                     <img src="admin_area/product_images/<?php echo $product_image;?>" width="80" height="80"/></td>
                     <td><h1><?php echo $single_price; ?>,-</h1></td>
                 </div>
             </tr>
-					
+                    
+                    
 					
 				<?php } } ?>
-
-                    <tr>
-						<td colspan="3" align="right"><b><h1>Total pris:</h1></b></td>
-						<td><h1><?php echo $total;?>,-</h1></td>
+                    
+                    <tr align="center">
+						<td></td>
+						<td></td>
+					<td align="right">
+                        <h1>Pris: <?php echo $total;?>,-</h1>
+                        <h1>Frakt: 79,-</h1>
+                        <h1>Totalpris: <?php echo $total+(79); ?></h1>
+                    </td>
 					</tr>
-					
+                    
 					<tr align="center">
 						<td><input type="submit" name="update_cart" value="Update Cart"/></td>
 						<td><input type="submit" name="continue" value="Continue Shopping" /></td>
-						<td><button><a href="checkout.php" style="text-decoration:none; color:black;">Checkout</a></button></td>
+						<td><button><a href="checkout.php" style="text-decoration:none; color:black;">Checkout</a></button>
+                        </td>
 					</tr>
-					
 				</table> 
-			
 			</form>
-			
+                    
+                    
+                    
+                    
 	<?php 
 		
 	function updatecart(){
@@ -196,16 +203,12 @@ include("includes/db.php");
 
 				
 				</div>
-			
 			</div>
-                    
 		</div>
+        
 		<!--Content wrapper ends-->
-		
-
-	
-		</div>
-<!--Main Container ends here-->
+    </div>
+    <!--Main Container ends here-->
 
 
 </body>

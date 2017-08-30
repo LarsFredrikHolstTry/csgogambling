@@ -79,7 +79,7 @@ include("functions/functions.php");
                             placeholder="eksempel@epost.no" required/></td>
                         </tr>
 
-                        <tr>
+                        <tr id='passordlogin'>
                             <td align="left"><b>Passord: </b><a style="float:right;" href="checkout.php?forgot_pass" class="glemtpassord">Glemt passord?</a></td>
                         </tr>
                         <tr>

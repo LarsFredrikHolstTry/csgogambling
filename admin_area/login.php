@@ -18,8 +18,8 @@ session_start();
 	<h1>Admin Login</h1>
     <form method="post" action="login.php">
     	<input type="text" name="email" placeholder="Eamil" required="required" />
-        <input type="password" name="password" placeholder="Password" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large" name="login">Login</button>
+        <input type="password" name="password" placeholder="Passord" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large" name="login">Logg inn</button>
     </form>
 </div>
 
@@ -50,7 +50,7 @@ include("includes/db.php");
 	}
 	else {
 	
-	echo "<script>alert('Password or Email is wrong, try again!')</script>";
+	echo "<script>alert('Passord / Email er feil, prøv igjen!')</script>";
 	
 	}
 	

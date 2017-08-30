@@ -29,6 +29,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+    margin: 0;
+	padding: 0;
+	border: 0;
     font-family: sans-serif;
     background-color: #d5dae6;
 }
@@ -38,7 +41,6 @@ body {
     height:auto;
     margin:auto;
 }
-
 
 #header {
 	width:1000px;

@@ -45,8 +45,9 @@ if(isset($_GET['add_cart'])){
 	$insert_pro = "insert into cart (p_id,ip_add) values ('$pro_id','$ip')";
 	
 	$run_pro = mysqli_query($con, $insert_pro); 
+        	echo "<script>window.alert('Produktet ble lagt til i handlekorven!')</script>";
 	
-	echo "<script>window.open('index.php','_self')</script>";
+	echo "<script>window.open('details.php?pro_id=$pro_id','_self')</script>";
 	}
 	
 }

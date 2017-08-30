@@ -108,7 +108,7 @@ include("functions/functions.php");
                         </div>		
 
                         <div id='leggivognhoyre'>
-                            <a href='index.php?add_cart=$pro_id'><button id='leggihandlevogn'><i class='fa fa-shopping-cart' aria-hidden='true'></i> &emsp; Legg i handlevogn</button></a>
+                            <a href='cart.php?add_cart=$pro_id'><button id='leggihandlevogn'><i class='fa fa-shopping-cart' aria-hidden='true'></i> &emsp; Legg i handlevogn</button></a>
                         </div>	
 
                         <div id='hoyre'>
